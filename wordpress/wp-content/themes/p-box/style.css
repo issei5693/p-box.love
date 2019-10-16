@@ -1,0 +1,886 @@
+@charset "utf-8";
+
+/*
+Theme Name: P-BOX
+Author: Issei Tamashiro
+*/
+
+/*===========================リセット===========================*/
+@import url("css/reset.css");
+/*追加リセット*/
+ul { list-style-type: none; }
+a {	color: #444; }
+h1,h2 {	font-weight: normal; }
+
+/*===========================フォント===========================*/
+body {
+	font-family: "Arial", 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', 'MS PGothic', Arial, sans-serif;
+	color: #444;
+	font-size: 100%;
+}
+
+/**** クリアフィクス ****/
+.cf::after,
+.site-width::after,
+.fl::after {
+	content: ".";
+	display: block;
+	height: 0;
+	font-size:0;
+	clear: both;
+	visibility:hidden;
+}
+
+/**** サイトの幅 ****/
+.site-width {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+/**** 共通 ****/
+.w10 { float: left; width: 10%; }
+.w20 { float: left; width: 20%; }
+.w30 { float: left; width: 30%; }
+.w40 { float: left; width: 40%; }
+.w50 { float: left; width: 50%; }
+.w60 { float: left; width: 60%; }
+.w70 { float: left; width: 70%; }
+.w80 { float: left; width: 80%; }
+.w90 { float: left; width: 90%; }
+.w100 { float: left; width: 100%; }
+
+.content-block {
+
+}
+
+.access-movie {
+	display: block;
+	width: 80%;
+	margin: 0 auto 50px;
+	padding: 20px;
+	height: auto;
+}
+
+/**** 見出し ****/
+.pege-title {
+	/* background: url('img/deep-wood.jpg'); */
+	background-color: #E9C15A;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+}
+
+.pege-title span {
+	font-size: 80%;
+}
+
+p.pege-title {
+	font-weight: bold;
+}
+
+.header-line1 {
+	font-size: 150%;
+	padding: 20px;
+	text-align: center;
+}
+
+.header-line2 {
+	font-size: 120%;
+	padding: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+.header-line2 {
+	font-size: 120%;
+	padding: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+/**** リスト ****/
+.list-table {
+	display: table;
+	width: 100%;
+}
+
+.list-table li {
+	display: table-cell;
+}
+
+.list-inline-block {
+	font-size: 0;
+}
+
+.list-inline-block > li {
+	font-size: medium;
+	display: inline-block;
+}
+
+/**** テーブル ****/
+.table-1 caption,
+.table-1 td,
+.table-1 th {
+	padding: 10px;
+	text-align: left;
+}
+
+.table-1 caption {
+	font-weight: bold;
+	font-size: 120%;
+}
+
+
+/**** 定義リスト ****/
+.dl-1 dt,
+.dl-1 dd {
+	padding: 10px;
+}
+
+.dl-1 dt {
+	font-weight: bold;
+}
+
+.dl-2 {
+	display: table;
+}
+
+.dl-2 dt {
+	font-weight: bold;
+}
+
+.dl-2 dt,
+.dl-2 dd {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 10px;
+}
+
+.dl-2 dt {
+	width: 10%;
+}
+
+.dl-2 dd {
+	width: 90%;
+}
+
+.dl-2 dd ul li a {
+	display: block;
+	margin: 0 10px 10px 0;
+}
+
+.dl-2 dd ul li a.select {
+	font-weight: bold;
+}
+
+.dl-2 dd ul li a:before {
+	content: "#";
+}
+
+.dl-2 dd ul li a:hover {
+	color: #6495ed;
+}
+
+/**** ボタン ****/
+.button {
+	display: inline-block;
+	padding: 10px 15px;
+	background-color: #895b2d;
+	color: #fff;
+	font-size: 80%;
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+.button:hover {
+	opacity: 0.6;
+}
+/**** ページャー ****/
+.pager {
+	margin: 30px 0;
+}
+
+.wp-pagenavi {
+	display: table;
+	max-width: 100%;
+	border: solid 1px #ccc;
+	border-radius: 5px;
+	margin: 0 auto;
+}
+
+.wp-pagenavi > * {
+	display: table-cell;
+	padding: 10px 20px;
+	border-right: solid 1px #ccc;
+}
+
+.wp-pagenavi > *:last-child {
+	border-right: 0;
+}
+
+.wp-pagenavi a:hover {
+	opacity: 0.5;
+}
+
+.wp-pagenavi .current {
+	opacity: 0.5;
+}
+
+/**** ラッパー ****/
+.wrapper {
+	/* background: url('img/thin-wood.jpg'); */
+	background-color: #dedede;
+	background-size: contain;
+	background-repeat: repeat;
+}
+
+/**** ヘッダー ****/
+.header {
+	background-color: #626260;
+}
+
+.header .col-3 {
+	display: table;
+	width: 100%;
+}
+
+.header .col-3 > * {
+	display: table-cell;
+}
+
+.header .col-3 .left {
+	text-align: left;
+	width: 15%;
+}
+
+.header .logo {
+	display: inline-block;
+	max-width: 155px;
+	height: auto;
+	margin: 20px auto;
+}
+
+.header .logo img {
+	width: 100%;
+	height: auto;
+}
+
+.header .col-3 .ceter {
+	width: 75%;
+}
+
+.header .col-3 .right {
+	text-align: right;
+	width: 20%;
+}
+
+.header #menuButton {
+		display: none;
+}
+
+/**** グロナビ ****/
+.global-nav {
+	margin: 20px 0;
+}
+
+.global-nav li a {
+	display: block;
+	text-align: center;
+	border-right: dotted 1px #ccc;
+	color: #fff;
+}
+
+.global-nav li:last-child a{
+	border-right: 0;
+}
+
+.global-nav a:hover {
+		opacity: 0.6;
+}
+
+.global-nav .en {
+	font-weight: bold;
+}
+
+.global-nav .ja {
+	font-size: 70%;
+}
+
+/**** パンくずリスト ****/
+.bread-crumb {
+	padding: 5px;
+}
+
+.bread-crumb .list-inline-block {
+	font-size: 100%;
+}
+
+.bread-crumb .list-inline-block li {
+	font-size: 80%;
+}
+
+.bread-crumb li:after {
+	content: '>>';
+	margin: 0 10px;
+}
+
+.bread-crumb li:last-child:after {
+	content:'';
+}
+
+.bread-crumb a {
+	text-decoration: underline;
+}
+
+/**** フッター ****/
+.footer {
+	border-top: solid 1px #ccc;
+	xbackground-color: #fefefe;
+	margin-top: 50px;
+}
+
+.footer-info {
+	max-width: 449px;
+	margin: 20px auto;
+}
+
+.footer-info .button {
+	margin: 10px;
+}
+
+.footer-info .reserve .button {
+	font-size: 60%;
+}
+
+.footer-info .table-1 {
+	font-size: 80%;
+}
+
+.footer-info .table-1 caption {
+	text-align: left;
+}
+
+.copyright {
+	/* background: url('img/deep-wood.jpg'); */
+	text-align: center;
+	padding: 30px;
+	color: #444;
+}
+
+.copyright p {
+	font-style: italic;
+	font-weight: bold;
+	font-size: 115%;
+}
+
+/**** index ****/
+#sliderContent ul {
+	overflow: hidden;
+}
+
+#sliderContent ul li img {
+	width: 100%;
+	height: auto;
+}
+
+.index .section1 figure {
+	width: 80%;
+}
+
+.index .section1 figure img {
+	width: 100%;
+	height: auto;
+}
+
+.index .section1 p {
+	line-height: 1.8;
+}
+
+.index .section2 li {
+	padding: 30px;
+}
+
+.index .section2 figure img {
+	width: 100%;
+	height: auto;
+}
+
+.index .section2 p {
+	font-size: 80%;
+	line-height: 1.8;
+}
+
+.index .section3 .shop-info .table-1,
+.index .section3 .shop-info .dl-1 {
+	font-size: 80%;
+}
+
+.index .section3 .shop-info figure img {
+	width: 100%;
+	height: auto;
+	padding: 10px;
+}
+
+.index .section3 .shop-info .google-map {
+	display: block;
+	width:80%;
+	margin: 0 auto;
+}
+
+/**** design ****/
+.design .section2 #designItems li {
+	width: 20%;
+	padding: 10px;
+	vertical-align: top;
+}
+
+.design .section2 #designItems li a {
+	display: block;
+	box-shadow: 0 0 8px #ccc;
+}
+
+.design .section2 #designItems li a+.image-info {
+	display: none;
+}
+
+.design .section2 #designItems li a img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+/**** design ****/
+.menu .w50 {
+	padding: 10px;
+}
+
+.menu .section1 table {
+	margin: 0 auto;
+}
+
+.menu .table-1 {
+	width: 100%;
+	border-collapse: separate;
+	margin: 0 auto;
+	border: solid 1px #ccc;
+	border-radius: 5px;
+	padding: 10px;
+	background-color: #E5E5E5;
+}
+
+.menu .table-1 th,
+.menu .table-1 td {
+	border-bottom: solid 1px #444;
+}
+
+.menu .table-1 th[colspan="2"]{
+	text-align: center;
+	font-weight: normal;
+	padding: 30px 0 10px 0;
+}
+
+.menu .table-1 caption {
+	text-align: center;
+}
+
+/**** ブログ / カテゴリー ****/
+.post-list > li {
+	width: 50%;
+	vertical-align: top;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.post-list > li a {
+	display: block;
+}
+
+.post-list > li a:hover {
+	opacity: 0.5;
+}
+
+.post-list > li a figure {
+	padding: 0 10px 10px 0;
+}
+
+.post-list > li a figure img {
+	width: 100%;
+	height: auto;
+}
+
+.post-list .post-title {
+	font-size: 120%;
+}
+
+.post-list .post-category li {
+	margin-right: 10px;
+}
+
+.post-list .post-category li:before {
+	content: '#';
+}
+
+/**** シングルページ ****/
+.single > .site-width> .w30 {
+	float: left;
+	padding-right: 10px;
+}
+
+.single .sidebar ul li a {
+	display: block;
+	border-bottom: solid 1px #ccc;
+	padding: 10px;
+}
+
+.single .sidebar ul li a:hover {
+	opacity: 0.5;
+}
+
+.single > .site-width> .w70 {
+	float: right;
+}
+
+.single .header-line2 {
+	font-size: 150%;
+	text-align: left;
+}
+
+.single .post-info {
+	margin-bottom: 10px;
+}
+
+.single .post-info > *{
+	margin: 10px 0;
+}
+
+.single .post-info > li .list-inline-block > li {
+	margin-right: 10px;
+}
+
+.single .post-info > li .list-inline-block > li:before {
+	content: "#";
+}
+
+.single .content {
+	margin-bottom: 50px;
+}
+
+.single .prev-next {
+	border-top: double 3px #ccc;
+}
+
+.single .prev-next ul li a {
+	display: block;
+	position: relative;
+	text-align: center;
+	padding: 20px;
+}
+
+.single .prev-next .next {
+	border-left: dotted 1px #ccc;
+	float: right;
+}
+
+.single .prev-next .prev a:before {
+	content:'<<';
+	position: absolute;
+	top: 30%;
+	left: 0;
+}
+
+.single .prev-next .next a:after {
+	content:'>>';
+	position: absolute;
+	top: 30%;
+	right: 0;
+}
+
+/*--- シングル内、投稿コンテンツ編集 ---*/
+.single .content {
+	margin-top: 50px;
+}
+
+.single img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+.single p {
+	line-height: 2;
+}
+
+
+@media screen and (max-width: 759px) {
+	.header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+		/* background-color: rgba(255,255,255,1); */
+		background-color: #626260;
+		box-shadow: 0 0 8px #444;
+		padding: 5px;
+	}
+
+	.header .col-3:after{
+		content: ".";
+		display: block;
+		height: 0;
+		font-size:0;
+		clear: both;
+		visibility:hidden;
+	}
+
+	.header .col-3 > * {
+		width: 33.3% !important;
+		text-align: center;
+	}
+
+	.header .logo {
+		max-width: 120px;
+		margin: 0;
+	}
+
+	.header .global-nav {
+		position: fixed;
+		top: 60px;
+		left: 0px;
+		right: 0px;
+		/* background-color: #fff; */
+		background-color: #626260;
+		color: #fff;
+	}
+
+	.header .global-nav .list-table,
+	.header .global-nav .list-table li {
+		display: block;
+	}
+
+	.global-nav {
+		margin: 0;
+	}
+
+	.global-nav li a {
+		display: block;
+		text-align: center;
+		border-right: 0;
+		border-bottom: dotted 1px #ccc;
+		padding: 5px 0;
+	}
+
+	.global-nav li:first-child a {
+		border-top: solid 1px #ccc;
+	}
+
+	.global-nav li:last-child a {
+		border-right: 0;
+		border-bottom: solid 1px #ccc;
+	}
+
+	.global-nav a:hover {
+			opacity: 0.6;
+	}
+
+	.global-nav .en {
+		font-weight: bold;
+	}
+
+	.global-nav .ja {
+		font-size: 70%;
+	}
+
+	.header #menuButton {
+		display: inline-block;
+		max-width: 30px;
+		margin-top: 5px;
+	}
+
+	.header #menuButton.close + .global-nav{
+		display: none;
+	}
+
+	.header #menuButton.open + .global-nav{
+		display: block;
+	}
+
+	.header #menuButton.close {
+		transition: 0.5s;
+	}
+
+	.header #menuButton.open {
+		transform: rotateZ(-90deg);
+		transition: 0.5s;
+	}
+
+	.header #menuButton img {
+		width: 100%;
+		height: auto;
+	}
+
+	main {
+		margin-top: 60px;
+	}
+
+	.single .post {
+		padding: 10px 20px;
+	}
+
+	.wp-pagenavi > * {
+		padding: 5px 10px;
+	}
+
+}
+
+@media screen and (max-width: 649px) {
+	.design .section2 #designItems li {
+		width: 25%;
+	}
+}
+
+@media screen and (max-width: 549px) {
+	.design .section2 #designItems li {
+		width: 33.3%;
+	}
+}
+
+@media screen and (max-width: 449px){
+	.reserve .button {
+		font-size: 60%;
+		padding: 10px 5px;
+	}
+
+	/*--- index ---*/
+	.index .section1 .w40,
+	.index .section1 .w60 {
+		float: none;
+		width: 100%;
+	}
+
+	.index .section1 .w40 figure {
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	.index .section1 .w60 p {
+		padding: 5px 10px;
+	}
+
+	.index .section2 .w50 {
+		float: none;
+		width: 100%;
+		padding: 0;
+	}
+
+	.index .section3 .shop-info .w60,
+	.index .section3 .shop-info .w40 {
+		float: none;
+		width: 100%;
+	}
+
+	.index .section3 .shop-info figure img {
+		padding: 0;
+	}
+
+	.index .section4 .access-movie {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+
+	.index section figure {
+		padding: 10px;
+	}
+	
+	.index section figure + p {
+		padding: 0 10px;
+	}
+	
+	/*--- footer ---*/
+	.footer .footer-info .w60,
+	.footer .footer-info .w40 {
+		float: none;
+		width: 100%;
+	}
+
+	.footer .footer-info .table-1 {
+		width: 100%;
+	}
+
+	.footer .footer-info .table-1 ul {
+		text-align: center;
+	}
+
+	.footer .footer-info .w40  {
+		text-align: center;
+	}
+
+	.footer .footer-info .introduce,
+	.footer .footer-info .reserve {
+		padding: 10px;
+	}
+
+	.footer .footer-info .introduce .button,
+	.footer .footer-info .reserve .button {
+		width: 100%;
+		margin: 0;
+		padding: 10px 0;
+		font-size: 100%;
+		text-align: center;
+	}
+
+	/*--- design ---*/
+	.design .section2 #designItems li {
+		width: 50%;
+	}
+
+	.design .section1 .dl-2 {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+
+	/*--- blog / category / design ---*/
+	.dl-2 dt,
+	.dl-2 dd {
+		display: block;
+		width: 100%;
+	}
+
+	/*--- menu ---*/
+	.section2 .w50,
+	.section3 .w50 {
+		float: none;
+		width: 100%;
+	}
+
+	/*--- blog / category ---*/
+	.post-list > li {
+		border-bottom: dotted 1px #ccc;
+	}
+
+	.post-list > li .w30,
+	.post-list > li .w70 {
+		float: none;
+		width: 100%;
+	}
+
+	/*--- single ---*/
+	.single > .site-width> .w30,
+	.single > .site-width> .w70 {
+		float: none;
+		width: 100%;
+		padding: 0 20px;
+		}
+
+	.single .header-line2 {
+		padding: 0;
+	}
+
+}
+
+/* 2018/02/18 */
+.mfp-image-holder .mfp-content {
+	max-width: 800px;
+}
