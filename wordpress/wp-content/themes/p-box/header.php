@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- use git -->
 <html <?php language_attributes(); ?>>
 <head><!-- this is cfbx -->
 	<title><?php bloginfo('name'); ?></title>
